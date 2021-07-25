@@ -9,10 +9,10 @@
           <v-icon>mdi-chevron-right</v-icon>
         </v-btn>
       </div>
-      <video src="http://www.callchain.cc/wp-content/themes/call/images/video.mp4" controls muted loop autoplay></video>
+      <video src="@/assets/video/video.mp4" controls muted loop autoplay></video>
     </div>
     <div class="notice-list d-flex align-center justify-center">
-      <v-icon color="primary">mdi-volume-high</v-icon>
+      <v-icon color="primary">fa-volume-up</v-icon>
       <swiper ref="mySwiper" :options="swiperOptions">
         <swiper-slide>
           <div class="notice d-flex align-center justify-space-between">
@@ -96,19 +96,19 @@
       </div>
       <v-row class="links">
         <v-col cols="6" md="3"><a class="d-flex flex-column align-center" href="https://twitter.com/callchainLedger" target="_blank">
-          <v-img max-width="64" src="@/assets/img/logo1.png" />
+          <v-icon x-large>fa-twitter</v-icon>
           <div class="txt">Twitter</div>
         </a></v-col>
         <v-col cols="6" md="3"><a class="d-flex flex-column align-center" href="https://t.me/callchain_group" target="_blank">
-          <v-img max-width="64" src="@/assets/img/logo2.png" />
+          <v-icon x-large>fa-telegram</v-icon>
           <div class="txt">Telegram</div>
         </a></v-col>
         <v-col cols="6" md="3"><a class="d-flex flex-column align-center" href="https://github.com/callchain" target="_blank">
-          <v-img max-width="64" src="@/assets/img/logo3.png" />
+          <v-icon x-large>fa-github</v-icon>
           <div class="txt">Github</div>
         </a></v-col>
         <v-col cols="6" md="3"><a  class="d-flex flex-column align-center" href="https://callchain.medium.com" target="_blank">
-          <v-img  max-width="64" src="@/assets/img/logo4.png" />
+          <v-icon x-large>fa-medium</v-icon>
           <div class="txt">Medium</div>
         </a></v-col>
       </v-row>

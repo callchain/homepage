@@ -30,14 +30,14 @@
           </template>
           <div class="menu-list">
             <a class="menu-list-item" href="https://github.com/callchain/call-lib/wiki" target="_blank">
-              <v-img src="@/assets/img/icon1.png" class="flex-grow-0" width="32" height="32"></v-img>
+              <v-icon color="primary">fa-code</v-icon>
               <div class="txt">
                 <div class="fz-16 red--text">开发者文档</div>
                 <div class="fz-12 red--text">开始构建Callchain应用</div>
               </div>
             </a>
             <a class="menu-list-item" href="https://github.com/callchain" target="_blank">
-              <v-img src="@/assets/img/icon2.png" class="flex-grow-0" width="32" height="32"></v-img>
+              <v-icon color="primary">fa-github</v-icon>
               <div class="txt">
                 <div class="fz-16 red--text">Github</div>
                 <div class="fz-12 red--text">访问我们的Github社区</div>
@@ -63,7 +63,7 @@
           <div class="menu-list">
             <div class="tit fz-16 red--text">浏览器</div>
             <a class="menu-list-item" href="http://block.callchain.cc/" target="_blank">
-              <v-img src="@/assets/img/icon1.png" class="flex-grow-0" width="32" height="32"></v-img>
+              <v-icon color="primary">fa-chrome</v-icon>
               <div class="txt">
                 <div class="fz-16 red--text">浏览器</div>
                 <div class="fz-12 red--text">查看Callchain链上信息</div>
@@ -71,14 +71,14 @@
             </a>
             <div class="tit fz-16 red--text">钱包</div>
             <a class="menu-list-item" href="https://wallet.callchain.cc/" target="_blank">
-              <v-img src="@/assets/img/icon2.png" class="flex-grow-0" width="32" height="32"></v-img>
+              <v-icon color="primary">fa-briefcase</v-icon>
               <div class="txt">
                 <div class="fz-16 red--text">CallWallet</div>
                 <div class="fz-12 red--text">Callchain网页钱包</div>
               </div>
             </a>
             <a class="menu-list-item" href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xcf7c87cb192bf21660b360f3f270400a42070aea" target="_blank">
-              <v-img src="@/assets/img/icon2.png" class="flex-grow-0" width="32" height="32"></v-img>
+              <v-icon color="primary">fa-compass</v-icon>
               <div class="txt">
                 <div class="fz-16 red--text">PancakeSwap</div>
                 <div class="fz-12 red--text">PancakeSwap上CALL和BUSD之间交易</div>
@@ -86,7 +86,7 @@
             </a>
             <div class="tit fz-16 red--text">跨链桥</div>
             <a class="menu-list-item" href="https://bridge.callchain.cc/" target="_blank">
-              <v-img src="@/assets/img/icon2.png" class="flex-grow-0" width="32" height="32"></v-img>
+              <v-icon color="primary">fa-compress</v-icon>
               <div class="txt">
                 <div class="fz-16 red--text">CallBridge</div>
                 <div class="fz-12 red--text">Callchain和BSC之间的跨链桥</div>

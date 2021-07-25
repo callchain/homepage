@@ -1,3 +1,4 @@
+import 'font-awesome/css/font-awesome.min.css'
 import Vue from 'vue'
 import Vuetify, { VSnackbar, VBtn, VIcon } from 'vuetify/lib'
 
@@ -33,7 +34,10 @@ const VuetifyObj = new Vuetify({
                 lightenGrey: '#f5f5f5'
             },
         },
-    }
+    },
+    icons: {
+        iconfont: 'fa4',
+    },
 })
 
 export default VuetifyObj

@@ -1,5 +1,5 @@
 <template>
-  <div id="footer" class="footer max-940">
+  <div id="footerComponent" class="footer max-940">
     <v-row class="hidden-sm-and-down">
       <v-col class="align-self-center">
         <v-img src="@/assets/img/logo.png" class="flex-grow-0" max-width="140"></v-img>
@@ -28,7 +28,7 @@
 
 <script>
   export default {
-    name: 'footer',
+    name: 'Footer',
     data: () => ({
     }),
     methods: {
@@ -37,7 +37,7 @@
 </script>
 
 <style lang="scss">
-#footer {
+#footerComponent {
   width: 940px;
   margin-top: 80px;
   .col {
@@ -63,7 +63,7 @@
 
 }
 @media screen and (max-width: 1000px) {
-  #footer {
+  #footerComponent {
     margin-top: 0;
     font-size: 12px;
     .copyright {

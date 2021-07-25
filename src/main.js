@@ -12,7 +12,6 @@ const isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|
 Vue.prototype.isMobile = !!isMobile;
 
 router.beforeEach((to, from, next) => {
-  console.log(11, to, from)
   next()
 })
 
