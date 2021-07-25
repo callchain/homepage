@@ -10,7 +10,7 @@
             class="nav"
         >
           <a href="" class="text-decoration-none fz-16 red--text">
-            首页
+            {{$t('app.home')}}
           </a>
         </v-btn>
         <v-menu bottom offset-y open-on-hover
@@ -23,24 +23,24 @@
                 class="nav"
             >
               <a href="" class="text-decoration-none fz-16 red--text">
-                开发者
+                {{$t('app.developer')}}
               </a>
-              <v-icon color="red">mdi-chevron-down</v-icon>
+              <v-icon color="red">fa-angle-down</v-icon>
             </v-btn>
           </template>
           <div class="menu-list">
             <a class="menu-list-item" href="https://github.com/callchain/call-lib/wiki" target="_blank">
               <v-icon color="primary">fa-code</v-icon>
               <div class="txt">
-                <div class="fz-16 red--text">开发者文档</div>
-                <div class="fz-12 red--text">开始构建Callchain应用</div>
+                <div class="fz-16 red--text">{{$t('app.develop_doc')}}</div>
+                <div class="fz-12 red--text">{{$t('app.develop_doc_tip')}}</div>
               </div>
             </a>
             <a class="menu-list-item" href="https://github.com/callchain" target="_blank">
               <v-icon color="primary">fa-github</v-icon>
               <div class="txt">
-                <div class="fz-16 red--text">Github</div>
-                <div class="fz-12 red--text">访问我们的Github社区</div>
+                <div class="fz-16 red--text">{{$t('app.github')}}</div>
+                <div class="fz-12 red--text">{{$t('app.github_tip')}}</div>
               </div>
             </a>
           </div>
@@ -55,41 +55,41 @@
                 class="nav"
             >
               <a href="" class="text-decoration-none fz-16 red--text">
-                生态系统
+                {{$t('app.ecosystem')}}
               </a>
-              <v-icon color="red">mdi-chevron-down</v-icon>
+              <v-icon color="red">fa-angle-down</v-icon>
             </v-btn>
           </template>
           <div class="menu-list">
-            <div class="tit fz-16 red--text">浏览器</div>
+            <div class="tit fz-16 red--text">{{$t('app.explorer')}}</div>
             <a class="menu-list-item" href="http://block.callchain.cc/" target="_blank">
               <v-icon color="primary">fa-chrome</v-icon>
               <div class="txt">
-                <div class="fz-16 red--text">浏览器</div>
-                <div class="fz-12 red--text">查看Callchain链上信息</div>
+                <div class="fz-16 red--text">{{$t('app.explorer_item')}}</div>
+                <div class="fz-12 red--text">{{$t('app.explorer_item_tip')}}</div>
               </div>
             </a>
-            <div class="tit fz-16 red--text">钱包</div>
+            <div class="tit fz-16 red--text">{{$t('app.wallet')}}</div>
             <a class="menu-list-item" href="https://wallet.callchain.cc/" target="_blank">
               <v-icon color="primary">fa-briefcase</v-icon>
               <div class="txt">
-                <div class="fz-16 red--text">CallWallet</div>
-                <div class="fz-12 red--text">Callchain网页钱包</div>
+                <div class="fz-16 red--text">{{$t('app.wallet_item1')}}</div>
+                <div class="fz-12 red--text">{{$t('app.wallet_item1_tip')}}</div>
               </div>
             </a>
             <a class="menu-list-item" href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xcf7c87cb192bf21660b360f3f270400a42070aea" target="_blank">
               <v-icon color="primary">fa-compass</v-icon>
               <div class="txt">
-                <div class="fz-16 red--text">PancakeSwap</div>
-                <div class="fz-12 red--text">PancakeSwap上CALL和BUSD之间交易</div>
+                <div class="fz-16 red--text">{{$t('app.wallet_item2')}}</div>
+                <div class="fz-12 red--text">{{$t('app.wallet_item2_tip')}}</div>
               </div>
             </a>
-            <div class="tit fz-16 red--text">跨链桥</div>
+            <div class="tit fz-16 red--text">{{$t('app.bridge')}}</div>
             <a class="menu-list-item" href="https://bridge.callchain.cc/" target="_blank">
               <v-icon color="primary">fa-compress</v-icon>
               <div class="txt">
-                <div class="fz-16 red--text">CallBridge</div>
-                <div class="fz-12 red--text">Callchain和BSC之间的跨链桥</div>
+                <div class="fz-16 red--text">{{$t('app.bridge_item')}}</div>
+                <div class="fz-12 red--text">{{$t('app.bridge_item_tip')}}</div>
               </div>
             </a>
           </div>
@@ -131,7 +131,7 @@
           </v-list-item>
         </v-list>
       </v-menu>
-      <v-icon class="font-weight-bold red--text hidden-md-and-up" @click="onToggleDrawer">mdi-menu</v-icon>
+      <v-icon class="font-weight-bold red--text hidden-md-and-up" @click="onToggleDrawer">fa-bars</v-icon>
     </v-app-bar>
     <v-main>
       <router-view/>
@@ -140,13 +140,13 @@
     <v-overlay :value="drawer">
       <v-list class="m-nav">
         <v-list-item class="border-b">
-          <v-list-item-title @click="onToggleDrawer" class="red--text">首页</v-list-item-title>
+          <v-list-item-title @click="onToggleDrawer" class="red--text">{{$t('app.home')}}</v-list-item-title>
         </v-list-item>
         <v-list-group
             :value="false"
         >
           <template class="border-b" v-slot:activator>
-            <v-list-item-title class="red--text">开发者</v-list-item-title>
+            <v-list-item-title class="red--text">{{$t('app.developer')}}</v-list-item-title>
           </template>
 
           <v-list
@@ -159,10 +159,10 @@
                 link
             >
               <v-list-item-title class="pl-5 d-flex nav">
-                <v-img src="@/assets/img/icon1.png" class="flex-grow-0" width="32" height="32"></v-img>
+                <v-icon color="primary">fa-code</v-icon>
                 <div class="txt pl-4">
-                  <div class="fz-16 red--text">开发者文档</div>
-                  <div class="fz-12 red--text">开始构建Callchain应用</div>
+                  <div class="fz-16 red--text">{{$t('app.develop_doc')}}</div>
+                  <div class="fz-12 red--text">{{$t('app.develop_doc_tip')}}</div>
                 </div>
               </v-list-item-title>
             </v-list-item>
@@ -170,10 +170,10 @@
                 link
             >
               <v-list-item-title class="pl-5 d-flex nav">
-                <v-img src="@/assets/img/icon1.png" class="flex-grow-0" width="32" height="32"></v-img>
+                <v-icon color="primary">fa-github</v-icon>
                 <div class="txt pl-4">
-                  <div class="fz-16 red--text">Github</div>
-                  <div class="fz-12 red--text">访问我们的Github社区</div>
+                  <div class="fz-16 red--text">{{$t('app.github')}}</div>
+                  <div class="fz-12 red--text">{{$t('app.github_tip')}}</div>
                 </div>
               </v-list-item-title>
             </v-list-item>
@@ -184,7 +184,7 @@
             :value="false"
         >
           <template class="border-b" v-slot:activator>
-            <v-list-item-title class="red--text">生态系统</v-list-item-title>
+            <v-list-item-title class="red--text">{{$t('app.ecosystem')}}</v-list-item-title>
           </template>
 
           <v-list
@@ -197,10 +197,10 @@
                 link
             >
               <v-list-item-title class="pl-5 d-flex nav">
-                <v-img src="@/assets/img/icon1.png" class="flex-grow-0" width="32" height="32"></v-img>
+                <v-icon color="primary">fa-chrome</v-icon>
                 <div class="txt pl-4">
-                  <div class="fz-16 red--text">浏览器</div>
-                  <div class="fz-12 red--text">查看Callchain链上信息</div>
+                  <div class="fz-16 red--text">{{$t('app.explorer_item')}}</div>
+                  <div class="fz-12 red--text">{{$t('app.explorer_item_tip')}}</div>
                 </div>
               </v-list-item-title>
             </v-list-item>
@@ -208,10 +208,10 @@
                 link
             >
               <v-list-item-title class="pl-5 d-flex nav">
-                <v-img src="@/assets/img/icon1.png" class="flex-grow-0" width="32" height="32"></v-img>
+                <v-icon color="primary">fa-briefcase</v-icon>
                 <div class="txt pl-4">
-                  <div class="fz-16 red--text">CallWallet</div>
-                  <div class="fz-12 red--text">Callchain网页钱包</div>
+                  <div class="fz-16 red--text">{{$t('app.wallet_item1')}}</div>
+                  <div class="fz-12 red--text">{{$t('app.wallet_item1_tip')}}</div>
                 </div>
               </v-list-item-title>
             </v-list-item>
@@ -219,10 +219,10 @@
                 link
             >
               <v-list-item-title class="pl-5 d-flex">
-                <v-img src="@/assets/img/icon1.png" class="flex-grow-0" width="32" height="32"></v-img>
+                <v-icon color="primary">fa-compress</v-icon>
                 <div class="txt pl-4">
-                  <div class="fz-16 red--text">CallBridge</div>
-                  <div class="fz-12 red--text">Callchain和BSC之间的跨链桥</div>
+                  <div class="fz-16 red--text">{{$t('app.bridge_item')}}</div>
+                  <div class="fz-12 red--text">{{$t('app.bridge_item_tip')}}</div>
                 </div>
               </v-list-item-title>
             </v-list-item>
@@ -250,8 +250,8 @@ export default {
       {text: 'Developer', url: '/'},
       {text: 'Ecosystem', url: '/'},
     ],
-    lang: 'zh-CN',
-    langTxt: '简体中文',
+    lang: 'en-US',
+    langTxt: 'English',
     langArr: [{text: '简体中文', value: 'zh-CN'}, {text: 'English', value: 'en'}],
     activeIdx: 0,
     drawer: false,
@@ -259,7 +259,6 @@ export default {
   }),
   methods: {
     onChangeLang({value, text}) {
-      console.log(value)
       this.lang = value;
       this.langTxt = text;
       this.$i18n.locale = value;

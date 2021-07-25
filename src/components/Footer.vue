@@ -5,20 +5,20 @@
         <v-img src="@/assets/img/logo.png" class="flex-grow-0" max-width="140"></v-img>
       </v-col>
       <v-col>
-        <div class="tit">关于Callchain</div>
-        <a class="txt">公告</a>
-        <a class="txt">风险提示</a>
+        <div class="tit">{{$t("footer.about")}}</div>
+        <a class="txt">{{$t("footer.notice")}}</a>
+        <a class="txt">{{$t("footer.warn")}}</a>
       </v-col>
       <v-col>
-        <div class="tit">开发工具</div>
-        <a class="txt">文档</a>
-        <a class="txt">Github</a>
+        <div class="tit">{{$t("footer.tools")}}</div>
+        <a class="txt">{{$t("footer.doc")}}</a>
+        <a class="txt">{{$t("footer.github")}}</a>
       </v-col>
       <v-col class="align-end">
         <div class="box">
-          <div class="tit">联系我们</div>
-          <a class="txt">技术支持</a>
-          <a class="txt">FAQ</a>
+          <div class="tit">{{$t("footer.contact")}}</div>
+          <a class="txt">{{$t("footer.support")}}</a><br/>
+          <a class="txt">{{$t("footer.faq")}}</a>
         </div>
       </v-col>
     </v-row>

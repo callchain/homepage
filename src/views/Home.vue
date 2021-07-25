@@ -2,10 +2,10 @@
   <v-container id="home" class="px-6">
     <div class="sec1 max-940 d-flex align-center justify-space-between">
       <div class="slogan">
-        <div class="tit red--text">使命</div>
-        <div class="mt-6 txt">每个人都可以发行个人代币</div>
+        <div class="tit red--text">{{$t("home.mission")}}</div>
+        <div class="mt-6 txt">{{$t("home.mission_tip")}}</div>
         <v-btn class="mt-6" color="primary">
-          <span>立即开始</span>
+          <span>{{$t("home.start")}}</span>
           <v-icon>mdi-chevron-right</v-icon>
         </v-btn>
       </div>
@@ -31,68 +31,66 @@
     <div class="sec2 max-940 d-flex align-center">
       <v-img src="@/assets/img/a.png" width="380"/>
       <div class="art">
-        <div class="tit red--text">为什么选择 Callchain</div>
+        <div class="tit red--text">{{$t("home.why_call")}}</div>
         <div class="txt">
-          Callchain是基于区块链技术的个人价值平台，实现便捷化、智能化的IP功能，提供高性能的IP代币平台。<br/>
-          Callchain的目标是实现个人的创造力、影响力、知识水平的价值化，这种价值通过Callchain定量化，
-          可以确权、定价、交易。基于此价值，每个人都能够获取基本的收入，人们的未来不再是为了生存而工作，
-          人们可以去做自己热爱的、对社会有价值的、创造个人价值的工作。
+          {{$t("home.why_call_tip1")}}<br/>
+          {{$t("home.why_call_tip2")}}
         </div>
       </div>
     </div>
     <div class="sec3 max-940">
-      <div class="tit red--text text-center">我们的特点</div>
+      <div class="tit red--text text-center">{{$t("home.advantage")}}</div>
       <div class="d-flex justify-space-between align-center">
-        <div class="fz-20">一键发币。原生区块链系统支持多资产发行，不需要编写智能合约，钱包界面一键发行个人的资产代币。</div>
+        <div class="fz-20">{{$t("home.advantage1")}}</div>
         <v-img src="@/assets/img/b.png" max-width="240"/>
       </div>
       <div class="d-flex justify-space-between align-center">
         <v-img src="@/assets/img/c.png" max-width="240"/>
-        <div class="fz-20">信任账户模型。基于IP主和粉丝之间信任关系构建的账户模型，IP主的热度是基于粉丝信任，信任越多IP主约有价值。</div>
+        <div class="fz-20">{{$t("home.advantage2")}}</div>
       </div>
       <div class="d-flex justify-space-between align-center">
-        <div class="fz-20">原生去中心化交易。个人代币可以和CALL交易，也可以和其他个人代币交易，币币交易无限制，不需要其他额外开发。</div>
+        <div class="fz-20">{{$t("home.advantage3")}}</div>
         <v-img src="@/assets/img/d.png" max-width="240"/>
       </div>
       <div class="d-flex justify-space-between align-center">
         <v-img src="@/assets/img/e.png" max-width="240"/>
-        <div class="fz-20">智能合约支持。实现基于Lua的可配置的智能合约支持，目前支持配置账户功能，在用户进行对有配置智能合约的账号进行转账时会触发。</div>
+        <div class="fz-20">{{$t("home.advantage4")}}</div>
       </div>
     </div>
     <div class="sec4 max-940">
-      <div class="tit fz-48 red--text text-center">我们的里程碑</div>
-      <div class="subtit fz-20 text-center">与Callchain一起创造历史</div>
+      <div class="tit fz-48 red--text text-center">{{$t("home.milestone")}}</div>
+      <div class="subtit fz-20 text-center">{{$t("home.milestone_tip")}}</div>
       <div class="timeline-list">
         <div class="timeline-list_item start">
           <div class="time">2018-04</div>
-          <div class="txt">主网发布上线</div>
+          <div class="txt">{{$t("home.milestone1")}}</div>
         </div>
         <div class="timeline-list_item">
           <div class="time">2018-09</div>
-          <div class="txt">一键发币上线</div>
+          <div class="txt">{{$t("home.milestone2")}}</div>
         </div>
         <div class="timeline-list_item">
           <div class="time">2019-04</div>
-          <div class="txt">一键发卡上线</div>
+          <div class="txt">{{$t("home.milestone3")}}</div>
         </div>
         <div class="timeline-list_item">
           <div class="time">2020-05</div>
-          <div class="txt">源码全开源</div>
+          <div class="txt">{{$t("home.milestone4")}}</div>
         </div>
         <div class="timeline-list_item">
           <div class="time">2020-11</div>
-          <div class="txt">链上返佣上线</div>
+          <div class="txt">{{$t("home.milestone5")}}</div>
         </div>
         <div class="timeline-list_item end">
-          <div class="txt">敬请期待</div>
+          <div class="txt">{{$t("home.milestone6")}}</div>
         </div>
       </div>
     </div>
     <div class="sec6 max-940">
-      <div class="tit">加入Callchain社区</div>
+      <div class="tit">{{$t("home.community")}}</div>
       <div class="subtit">
-        Callchain是一个全球性的、去中心化的公链，拥有来自世界各地的开发人员和社区成员。<br/>
-        加入我们的讨论，来获取最新消息和公告。
+        {{$t("home.community_tip1")}}<br/>
+        {{$t("home.community_tip2")}}
       </div>
       <v-row class="links">
         <v-col cols="6" md="3"><a class="d-flex flex-column align-center" href="https://twitter.com/callchainLedger" target="_blank">
@@ -114,11 +112,11 @@
       </v-row>
     </div>
     <div class="sec7 max-940">
-      <div class="tit">订阅我们获得更多消息</div>
-      <div class="subtit">我们将向您发送有关Callchain的最新信息</div>
+      <div class="tit">{{$t("home.subscription")}}</div>
+      <div class="subtit">{{$t("home.subscription_tip")}}</div>
       <div class="ipt">
-        <input type="text" placeholder="请输入你的邮箱地址" />
-        <div class="btn">订阅</div>
+        <input type="text" placeholder="" />
+        <div class="btn">{{$t("home.subscribe")}}</div>
       </div>
     </div>
   </v-container>
@@ -191,7 +189,7 @@ export default {
       height: 460px;
       .slogan {
         line-height: 1;
-        width: 250px;
+        width: 280px;
         .tit {
           font-size: 60px;
         }
@@ -265,7 +263,7 @@ export default {
           transform: translateX(-50%);
           width: 32px;
           height: 32px;
-          background: url("../assets/img/jb.png") no-repeat center center;
+          background: url("../assets/img/call.png") no-repeat center center;
           background-size: 100%;
         }
       }
@@ -366,7 +364,7 @@ export default {
           text-indent: 16px;
         }
         .btn {
-          width: 62px;
+          width: 80px;
           height: 32px;
           color: #fff;
           display: inline-flex;
