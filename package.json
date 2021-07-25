@@ -8,11 +8,13 @@
     "start": "npm run serve"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "chart.js": "^2.9.4",
     "core-js": "^3.6.5",
     "dayjs": "^1.10.4",
     "echarts": "4",
     "mathjs": "^9.0.0",
+    "moment": "^2.29.1",
     "swiper": "^6.7.5",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",

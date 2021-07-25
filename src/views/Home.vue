@@ -14,16 +14,10 @@
     <div class="notice-list d-flex align-center justify-center">
       <v-icon color="primary">fa-volume-up</v-icon>
       <swiper ref="mySwiper" :options="swiperOptions">
-        <swiper-slide>
+        <swiper-slide v-for="(item,i) in newsData" v-bind:key="i">
           <div class="notice d-flex align-center justify-space-between">
-            <a>Callchain跨链桥正式上线，支持主流资产一键跨链</a>
-            <span class="hidden-sm-and-down">2021-07-16 17:54:03</span>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="notice d-flex align-center justify-space-between">
-            <a>风险提示: Callchain官方不会发布任何Swap项目，因为所有项目都是由社区开发的，所以Callchain对这些项目造成的问题不承担任何责任。此外，Callchain不为相关项目提供客户服务。</a>
-            <span class="hidden-sm-and-down">2021-07-16 17:54:03</span>
+            <a :href="item.link" target="_blank">{{item.title}}</a>
+            <span class="hidden-sm-and-down">{{item.update_time | toTime}}</span>
           </div>
         </swiper-slide>
       </swiper>
@@ -130,6 +124,8 @@ SwiperClass.use([Pagination, Mousewheel, Autoplay])
 Vue.use(getAwesomeSwiper(SwiperClass))
 const { Swiper, SwiperSlide } = getAwesomeSwiper(SwiperClass)
 import 'swiper/swiper-bundle.css'
+import moment from 'moment'
+import axios from 'axios'
 
 export default {
   name: "Home",
@@ -146,10 +142,34 @@ export default {
         loop: true,
         speed: 500
         // Some Swiper option/callback...
+      },
+      news: {
+        'zh-CN': [],
+        'en-US': []
       }
     }
   },
+  computed: {
+    newsData: function() {
+      return this.news[this.$i18n.locale];
+    }
+  },
   methods: {
+  },
+  filters: {
+    toTime: function(v) {
+      let d = moment.unix(v);
+      return d.format('YYYY-MM-DD');
+    }
+
+  },
+  async created() {
+    let langs = ['zh-CN', 'en-US'];
+    for (let i = 0; i < langs.length; ++i)
+    {
+      let resp = await axios.get('https://data.callchain.cc/news/' + langs[i] + '/latest');
+      this.news[langs[i]] = resp.data.data;
+    }
   }
 }
 </script>
