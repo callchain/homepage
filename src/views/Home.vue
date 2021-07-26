@@ -283,7 +283,7 @@ export default {
           transform: translateX(-50%);
           width: 32px;
           height: 32px;
-          background: url("../assets/img/call.png") no-repeat center center;
+          background: url("../assets/img/jb.png") no-repeat center center;
           background-size: 100%;
         }
       }
