@@ -1,5 +1,7 @@
 # Callchain Home Page
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9162b46e-6685-4635-9e89-ae3aea79b49a/deploy-status)](https://app.netlify.com/sites/callmain/deploys)
+
 ## Overview 
 
 Production Url: https://callchain.cc
