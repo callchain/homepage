@@ -9,7 +9,10 @@
           <v-icon>mdi-chevron-right</v-icon>
         </v-btn>
       </div>
-      <video src="@/assets/video/video.mp4" controls muted loop autoplay></video>
+      <div id="video">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MmtzVUzppl0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <!-- <video src="@/assets/video/video.mp4" controls muted loop autoplay></video> -->
     </div>
     <div class="notice-list d-flex align-center justify-center">
       <v-icon color="primary">fa-volume-up</v-icon>
@@ -217,9 +220,11 @@ export default {
           font-size: 20px;
         }
       }
-      video {
+      #video {
+        width: 560px;
+        height: 315px;
         //height: 460px;
-        height: 300px;
+        // height: 300px;
       }
     }
 
@@ -413,7 +418,7 @@ export default {
         justify-content: center!important;
         padding: 30px 0;
         height: auto;
-        video {
+        #video {
           margin-top: 30px;
           width: 100%;
           height: 200px;
