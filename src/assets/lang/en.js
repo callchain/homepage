@@ -14,7 +14,7 @@ export const app = {
     wallet_item1_tip: 'Web page wallet for Callchain',
     wallet_item2: 'PancakeSwap',
     wallet_item2_tip: 'Trade CALL for BUSD in PancakeSwap',
-    bridge: 'Cross Bridge',
+    bridge: 'Bridge',
     bridge_item: 'CallBridge',
     bridge_item_tip: 'Cross CALL token between Callchain and BSC'
 };
