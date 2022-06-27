@@ -77,6 +77,13 @@
                 <div class="fz-12 red--text">{{$t('app.wallet_item1_tip')}}</div>
               </div>
             </a>
+            <a class="menu-list-item" href="https://wallet.callchain.cc/" target="_blank">
+              <v-icon color="primary">fa-link</v-icon>
+              <div class="txt">
+                <div class="fz-16 red--text">CallMask</div>
+                <div class="fz-12 red--text">Web extension wallet for Callchain</div>
+              </div>
+            </a>
             <a class="menu-list-item" href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xcf7c87cb192bf21660b360f3f270400a42070aea" target="_blank">
               <v-icon color="primary">fa-compass</v-icon>
               <div class="txt">
