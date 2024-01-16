@@ -22,7 +22,7 @@
         </div>
       </v-col>
     </v-row>
-    <div class="copyright">CopyRight©2018-2021 Callchain Foundation All Rights Reserved.</div>
+    <div class="copyright">CopyRight©2018-2024 Callchain Foundation All Rights Reserved.</div>
   </div>
 </template>
 

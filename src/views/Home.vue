@@ -4,7 +4,7 @@
       <div class="slogan">
         <div class="tit red--text">{{$t("home.mission")}}</div>
         <div class="mt-6 txt">{{$t("home.mission_tip")}}</div>
-        <v-btn class="mt-6" color="primary">
+        <v-btn class="mt-6" color="primary" @click="toWallet()">
           <span>{{$t("home.start")}}</span>
           <v-icon>mdi-chevron-right</v-icon>
         </v-btn>
@@ -154,10 +154,40 @@ export default {
   },
   computed: {
     newsData: function() {
-      return this.news[this.$i18n.locale];
+      let data = this.news[this.$i18n.locale];
+      if (data && data.length > 0)
+      {
+        return data;
+      }
+      return [
+        {
+          title: 'Contact information update',
+          link: 'https://callchain.medium.com/contact-information-update-2024-b87f7dfe7449',
+          update_time: 1705339461
+        },
+        {
+          title: 'Round 2 10 millions CALL token buyback plan is still in progress',
+          link: 'https://callchain.medium.com/round-2-10-millions-call-token-buyback-plan-is-still-in-progress-69d7345f57b4',
+          update_time: 1693329844
+        },
+        {
+          title: 'Update for CallWallet USD gateway',
+          link: 'https://callchain.medium.com/update-for-callwallet-usd-gateway-2024-17ceb66d9e17',
+          update_time: 1705339461
+        },
+        {
+          title: 'Convert ETH CALL token to Callchain mainnet native token',
+          link: 'https://callchain.medium.com/convert-eth-call-token-to-callchain-mainnet-native-token-2024-27ac713da8ef',
+          update_time: 1705339461
+        }
+      ];
     }
   },
   methods: {
+    toWallet() {
+      // go to wallet page, https://wallet.callchain.cc
+      window.open('https://wallet.callchain.cc', '_blank');
+    }
   },
   filters: {
     toTime: function(v) {

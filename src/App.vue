@@ -101,6 +101,55 @@
             </a>
           </div>
         </v-menu>
+        <!-- Media -->
+        <v-menu bottom offset-y open-on-hover
+        >
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+                v-bind="attrs"
+                v-on="on"
+                text
+                class="nav"
+            >
+              <a href="" class="text-decoration-none fz-16 red--text">
+                {{$t('app.media')}}
+              </a>
+              <v-icon color="red">fa-angle-down</v-icon>
+            </v-btn>
+          </template>
+          <div class="menu-list">
+            <a class="menu-list-item" href="https://twitter.com/callchainLedger" target="_blank">
+              <v-icon color="primary">fa-twitter</v-icon>
+              <div class="txt">
+                <div class="fz-16 red--text">{{$t('app.media_item1')}}</div>
+                <div class="fz-12 red--text">{{$t('app.media_item1_tip')}}</div>
+              </div>
+            </a>
+            <a class="menu-list-item" href="https://t.me/callchain_group" target="_blank">
+              <v-icon color="primary">fa-telegram</v-icon>
+              <div class="txt">
+                <div class="fz-16 red--text">{{$t('app.media_item3')}}</div>
+                <div class="fz-12 red--text">{{$t('app.media_item3_tip')}}</div>
+              </div>
+            </a>
+            <a class="menu-list-item" href="https://discord.gg/gy6N6nxx" target="_blank">
+              <v-icon color="primary">fa-users</v-icon>
+              <div class="txt">
+                <div class="fz-16 red--text">{{$t('app.media_item4')}}</div>
+                <div class="fz-12 red--text">{{$t('app.media_item4_tip')}}</div>
+              </div>
+            </a>
+            <a class="menu-list-item" href="https://callchain.medium.com/" target="_blank">
+              <v-icon color="primary">fa-medium</v-icon>
+              <div class="txt">
+                <div class="fz-16 red--text">{{$t('app.media_item2')}}</div>
+                <div class="fz-12 red--text">{{$t('app.media_item2_tip')}}</div>
+              </div>
+            </a>
+            
+          </div>
+        </v-menu>
+
       </v-toolbar-items>
       <v-spacer></v-spacer>
       <v-menu class="ml-auto" bottom offset-y>
@@ -164,6 +213,7 @@
 
             <v-list-item
                 link
+                href="https://github.com/callchain/call-lib/wiki"
             >
               <v-list-item-title class="pl-5 d-flex nav">
                 <v-icon color="primary">fa-code</v-icon>
@@ -175,6 +225,7 @@
             </v-list-item>
             <v-list-item
                 link
+                href="https://github.com/callchain/"
             >
               <v-list-item-title class="pl-5 d-flex nav">
                 <v-icon color="primary">fa-github</v-icon>
@@ -187,6 +238,7 @@
           </v-list>
 
         </v-list-group>
+        
         <v-list-group
             :value="false"
         >
@@ -202,6 +254,7 @@
 
             <v-list-item
                 link
+                href="http://block.callchain.cc/"
             >
               <v-list-item-title class="pl-5 d-flex nav">
                 <v-icon color="primary">fa-chrome</v-icon>
@@ -213,6 +266,7 @@
             </v-list-item>
             <v-list-item
                 link
+                href="https://wallet.callchain.cc/"
             >
               <v-list-item-title class="pl-5 d-flex nav">
                 <v-icon color="primary">fa-briefcase</v-icon>
@@ -224,6 +278,7 @@
             </v-list-item>
             <v-list-item
                 link
+                href="https://bridge.callchain.cc/"
             >
               <v-list-item-title class="pl-5 d-flex">
                 <v-icon color="primary">fa-compress</v-icon>
@@ -235,6 +290,72 @@
             </v-list-item>
           </v-list>
 
+        </v-list-group>
+
+        <!-- Media -->
+        <v-list-group
+            :value="false"
+        >
+          <template class="border-b" v-slot:activator>
+            <v-list-item-title class="red--text">{{$t('app.media')}}</v-list-item-title>
+          </template>
+
+          <v-list
+              :value="true"
+              no-action
+              sub-group
+          >
+
+            <v-list-item
+                link
+                href="https://twitter.com/callchainLedger"
+            >
+              <v-list-item-title class="pl-5 d-flex nav">
+                <v-icon color="primary">fa-twitter</v-icon>
+                <div class="txt pl-4">
+                  <div class="fz-16 red--text">{{$t('app.media_item1')}}</div>
+                  <div class="fz-12 red--text">{{$t('app.media_item1_tip')}}</div>
+                </div>
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item
+                link
+                href="https://t.me/callchain_group"
+            >
+              <v-list-item-title class="pl-5 d-flex nav">
+                <v-icon color="primary">fa-telegram</v-icon>
+                <div class="txt pl-4">
+                  <div class="fz-16 red--text">{{$t('app.media_item3')}}</div>
+                  <div class="fz-12 red--text">{{$t('app.media_item3_tip')}}</div>
+                </div>
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item
+                link
+                href="https://discord.gg/gy6N6nxx"
+            >
+              <v-list-item-title class="pl-5 d-flex nav">
+                <v-icon color="primary">fa-users</v-icon>
+                <div class="txt pl-4">
+                  <div class="fz-16 red--text">{{$t('app.media_item4')}}</div>
+                  <div class="fz-12 red--text">{{$t('app.media_item4_tip')}}</div>
+                </div>
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item
+                link
+                href="https://callchain.medium.com/"
+            >
+              <v-list-item-title class="pl-5 d-flex nav">
+                <v-icon color="primary">fa-medium</v-icon>
+                <div class="txt pl-4">
+                  <div class="fz-16 red--text">{{$t('app.media_item2')}}</div>
+                  <div class="fz-12 red--text">{{$t('app.media_item2_tip')}}</div>
+                </div>
+              </v-list-item-title>
+            </v-list-item>
+
+          </v-list>
         </v-list-group>
 
       </v-list>

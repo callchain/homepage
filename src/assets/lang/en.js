@@ -16,13 +16,23 @@ export const app = {
     wallet_item2_tip: 'Trade CALL for BUSD in PancakeSwap',
     bridge: 'Bridge',
     bridge_item: 'CallBridge',
-    bridge_item_tip: 'Cross CALL token between Callchain and BSC'
+    bridge_item_tip: 'Cross CALL token between Callchain and BSC',
+
+    media: 'Media',
+    media_item1: 'Twitter',
+    media_item1_tip: 'Follow us on Twitter',
+    media_item2: 'Medium',
+    media_item2_tip: 'Follow us on Medium',
+    media_item3: 'Telegram',
+    media_item3_tip: 'Join our Telegram community',
+    media_item4: 'Discord',
+    media_item4_tip: 'Join our Discord community',
 };
 
 
 export const home = {
     mission: 'Mission',
-    mission_tip: 'Everyone Can Issue Own Token',
+    mission_tip: 'Everyone can issue personal token',
     start: 'Start Now',
     why_call: 'Why Callchain',
     why_call_tip1: 'Callchain is one personal value platform based on blockchain, which realizes convenient and intelligent IP tokenize and provides one high-performance IP token platform.',

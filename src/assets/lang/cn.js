@@ -16,7 +16,17 @@ export const app = {
     wallet_item2_tip: 'PancakeSwap上CALL和BUSD之间交易',
     bridge: '跨链桥',
     bridge_item: 'CallBridge',
-    bridge_item_tip: 'Callchain和BSC之间的跨链桥'
+    bridge_item_tip: 'Callchain和BSC之间的跨链桥',
+
+    media: '媒体',
+    media_item1: 'Twitter',
+    media_item1_tip: '关注我们的Twitter',
+    media_item2: 'Medium',
+    media_item2_tip: '关注我们的Medium',
+    media_item3: 'Telegram',
+    media_item3_tip: '加入我们的Telegram社区',
+    media_item4: 'Discord',
+    media_item4_tip: '加入我们的Discord社区',
 };
 
 export const home = {
